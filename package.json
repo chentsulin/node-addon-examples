@@ -1,0 +1,17 @@
+{
+  "name": "node-addon-helloworld",
+  "version": "0.0.1",
+  "description": "add-on",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "add-on"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^2.0.1"
+  }
+}
