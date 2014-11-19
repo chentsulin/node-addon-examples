@@ -22,8 +22,8 @@ Handle<Value> GetStructure(const Arguments& args) {
     return scope.Close(result);
 }
 
-void Init(Handle<Object> target) {
-    target->Set(String::NewSymbol("getStructure"), FunctionTemplate::New(GetStructure)->GetFunction());
+void Init(Handle<Object> exports) {
+    exports->Set(String::NewSymbol("getStructure"), FunctionTemplate::New(GetStructure)->GetFunction());
 }
 
 NODE_MODULE(structure, Init);

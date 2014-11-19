@@ -41,8 +41,8 @@ Handle<Value> GetArray(const Arguments& args) {
     return scope.Close(result);
 }
 
-void Init(Handle<Object> target) {
-    target->Set(String::NewSymbol("getArray"), FunctionTemplate::New(GetArray)->GetFunction());
+void Init(Handle<Object> exports) {
+    exports->Set(String::NewSymbol("getArray"), FunctionTemplate::New(GetArray)->GetFunction());
 }
 
 NODE_MODULE(array, Init);
