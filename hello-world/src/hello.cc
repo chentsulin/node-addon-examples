@@ -8,8 +8,8 @@ Handle<Value> SayHelloWorld(const Arguments& args) {
     return scope.Close(String::New("Hello world!"));
 }
 
-void Init_Hello_World(Handle<Object> target) {
+void Init(Handle<Object> target) {
     target->Set(String::NewSymbol("sayHelloWorld"), FunctionTemplate::New(SayHelloWorld)->GetFunction());
 }
 
-NODE_MODULE(hello, Init_Hello_World);
+NODE_MODULE(hello, Init);

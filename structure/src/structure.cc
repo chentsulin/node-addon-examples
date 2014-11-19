@@ -15,11 +15,11 @@ Person john = { "John", 24, true };
 
 Handle<Value> GetStructure(const Arguments& args) {
     HandleScope scope;
-    Handle<Object> Result = Object::New();
-    Result->Set(String::New("name"), String::New(john.name));
-    Result->Set(String::New("age"), Number::New(john.age));
-    Result->Set(String::New("isMale"), Boolean::New(john.isMale));
-    return scope.Close(Result);
+    Handle<Object> result = Object::New();
+    result->Set(String::New("name"), String::New(john.name));
+    result->Set(String::New("age"), Number::New(john.age));
+    result->Set(String::New("isMale"), Boolean::New(john.isMale));
+    return scope.Close(result);
 }
 
 void Init(Handle<Object> target) {
